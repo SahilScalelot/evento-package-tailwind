@@ -19,6 +19,7 @@ module.exports = {
         '40': ['2.5rem', '.9'],
       },
       colors: {
+        brightGray: '#eee',
         spiroDiscoBall: '#20C0E8',
         japaneseIndigo: '#25364F',
         quicksilver: '#9BA6A8',
