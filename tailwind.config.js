@@ -24,7 +24,7 @@ module.exports = {
         japaneseIndigo: '#25364F',
         quicksilver: '#9BA6A8',
         water: '#D3F6FF',
-        magicPotion: '#4DFEEC',
+        magicPotion: '#FE4D5F',
         caribbeanGreen: '#13E1B0',
         ufoGreen: '#36C66F',
       },

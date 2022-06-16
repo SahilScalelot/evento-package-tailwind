@@ -11,12 +11,13 @@ body{@apply font-primary text-japaneseIndigo bg-brightGray;}
 .anim {@apply transition-all duration-300;}
 
 /* Titles */
-h1 {@apply font-bold text-3xl;}
+h1,.h1 {@apply font-bold text-3xl;}
 h2 {@apply font-bold text-2xl;}
 h3 {@apply font-bold text-xl;}
 
 /* Paragraphs */
 p {@apply font-semibold md:font-bold text-xs md:text-base lg:text-lg;}
+p.exsmall {@apply text-[13px] leading-5 font-medium text-japaneseIndigo;}
 
 /* Wrapper */
 .wrapper {@apply max-w-screen-xl mx-auto px-3.5 md:px-5 xl:px-8 2xl:px-10;}
@@ -26,7 +27,11 @@ p {@apply font-semibold md:font-bold text-xs md:text-base lg:text-lg;}
 .nav a {@apply flex items-center text-base font-bold space-x-4 border-l-[3px] border-transparent px-4 py-2.5 hover:border-current hover:text-spiroDiscoBall transition-all duration-300;}
 .nav a.active {@apply text-spiroDiscoBall border-spiroDiscoBall;}
 
+/* rightInContent */
+.rightInContent {@apply py-12;}
 
+/* Button Default */
+.btn-primary {@apply bg-spiroDiscoBall text-white border-2 border-spiroDiscoBall hover:text-spiroDiscoBall hover:bg-transparent transition-all duration-300 inline-block text-center text-lg font-bold py-2.5 px-8 rounded;}
 
 
 ::-webkit-scrollbar {background-color: transparent;}
@@ -36,3 +41,43 @@ p {@apply font-semibold md:font-bold text-xs md:text-base lg:text-lg;}
 ::-webkit-scrollbar-thumb {border-radius: 0.25rem!important;}
 ::-webkit-scrollbar-track {--tw-bg-opacity: 1!important;background-color: rgb(241 245 249/var(--tw-bg-opacity))!important;}
 ::-webkit-scrollbar-track {border-radius: 0.25rem!important;}
+
+/* checkbox right */
+.checkbox {@apply relative flex justify-center items-center;}
+.checkbox input{@apply appearance-none w-8 h-8 border border-gray-300 rounded-md;}
+.checkbox i{@apply absolute scale-0 origin-center;}
+input:checked {@apply bg-spiroDiscoBall border-spiroDiscoBall duration-200;}
+input:checked + i{@apply scale-100 duration-300;}
+
+.input-titel{@apply block text-sm text-quicksilver font-bold pb-1;}
+.title-btn{@apply px-6 py-2.5 bg-spiroDiscoBall rounded-md text-white text-base font-semibold flex items-center;}
+.arrow{@apply appearance-none w-full;background-image: url('../svg/arrow.svg');background-repeat: no-repeat;background-position: calc(100% - 17px) center;}
+
+
+/* Select Price per Radio */
+.selectPrice label input[type="radio"]:checked + span {@apply bg-spiroDiscoBall text-white;}
+
+
+/* Switch toggle */
+input[type="checkbox"].switch{@apply appearance-none w-[50px] h-[10px] bg-brightGray rounded-md relative outline-none cursor-pointer before:content-[''] before:absolute before:transition-all before:w-6 before:h-6 before:border-4 before:border-caribbeanGreen before:bg-brightGray before:rounded-full before:top-1/2 before:left-0 before:-translate-y-1/2 checked:before:left-[calc(100%-20px)] checked:bg-caribbeanGreen checked:before:bg-caribbeanGreen;}
+input[type="checkbox"].switch:checked ~ .on{@apply text-caribbeanGreen;}
+input[type="checkbox"].switch:checked ~ .off{@apply text-japaneseIndigo;}
+
+/* input-css required input  */
+.input-label-holder{@apply flex items-center justify-between;}
+.input-titel span{@apply text-red-500 text-lg;}
+.inputHolder input.input,.inputHolder select{@apply flex items-center w-full bg-white p-3.5 py-3 outline-none rounded-md;}
+.input-label-holder .input-checkd{@apply text-sm font-bold text-quicksilver flex items-center align-middle;}
+
+.option{@apply text-sm md:text-base font-bold;}
+
+
+/* upload input */
+.upload-holder{@apply w-full space-y-2.5;}
+.upload{@apply py-5 px-5 text-center bg-white block w-full rounded-md border-2 border-dashed border-quicksilver;}
+.upload-box{@apply p-1.5 bg-white rounded-md w-28 h-28;}
+.upload-box button{@apply h-5 w-full text-center bg-spiroDiscoBall text-xs font-bold text-white absolute bottom-0 inset-x-0;}
+
+/* upload popup */
+.upload-popup{@apply p-2;}
+.btn-cancel {@apply bg-magicPotion border border-magicPotion hover:text-magicPotion;}
