@@ -25,6 +25,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-list-alpha:before {
+  content: "\e92b";
+}
+.icon-list:before {
+  content: "\e940";
+}
+.icon-list-num:before {
+  content: "\e941";
+}
+.icon-left-alignment-:before {
+  content: "\e942";
+}
+.icon-center-alignment:before {
+  content: "\e943";
+}
+.icon-left-alignment:before {
+  content: "\e944";
+}
+.icon-italic:before {
+  content: "\e945";
+}
+.icon-underline:before {
+  content: "\e946";
+}
+.icon-capitals:before {
+  content: "\e947";
+}
+.icon-bold:before {
+  content: "\e948";
+}
 .icon-calendar2:before {
   content: "\e901";
   color: #9ba0a8;

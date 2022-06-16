@@ -17,7 +17,7 @@
 
     <div class="main flex min-h-screen">
       <!-- Left Panel -->
-      <div class="max-w-[230px] w-full bg-white shadow-md relative z-30">
+      <div class="leftPanel max-w-[230px] w-full bg-white shadow-md relative z-30">
         <div class="logo text-center px-4 pt-5 pb-8">
           <a href="#" class="block"><img src="../assest/svg/logo.svg" alt="Evento Package Logo" class="max-w-full w-auto mx-auto" /></a>
         </div>
@@ -93,31 +93,33 @@
     </div>
 
     <!-- Create New  -->
-    <div class="popup table fixed w-full inset-0 z-40 bg-black bg-opacity-75">
-      <div class="table-cell align-middle h-screen">
-        <div class="max-w-2xl w-full mx-auto bg-brightGray py-11 px-12">
-          <div class="flex justify-between items-center">
-            <h1 class="h1">Create New</h1>
-            <div class="flex items-center space-x-6">
-              <a href="#" class="text-base font-bold text-spiroDiscoBall"><i class="icon-plus font-bold text-xs"></i> <span>Add Category</span></a>
-              <a href="#" class="text-xl"><i class="icon-close"></i></a>
+    <div class="popup table fixed w-full inset-0 z-40 bg-black bg-opacity-75 h-screen">
+      <div class="table-cell align-middle">
+        <div class="popin max-w-2xl w-full mx-auto max-h-[calc(100vh-55px)] overflow-y-auto">
+          <div class="bg-brightGray p-7 space-y-7">
+            <div class="flex justify-between items-center">
+              <h1 class="h1">Create New</h1>
+              <div class="flex items-center space-x-6">
+                <a href="#" class="text-base font-bold text-spiroDiscoBall"><i class="icon-plus font-bold text-xs"></i> <span>Add Category</span></a>
+                <a href="#" class="text-xl"><i class="icon-close"></i></a>
+              </div>
             </div>
+            <form class="space-y-5 py-6">
+              <div class="w-full inputHolder">
+                <label class="input-titel">Select Category</label>
+                <select class="w-full arrow option">
+                  <option>Sweet Love Catering</option>
+                  <option>Love Catering</option>
+                  <option>Sweet Catering</option>
+                </select>
+              </div>
+              <div class="w-full inputHolder">
+                <label class="input-titel">Give Display Name of Your Category</label>
+                <input class="input" type="text"/>
+              </div>
+            </form>
+            <a href="#" class="btn-primary w-full uppercase">Submit</a>
           </div>
-          <form class="space-y-5 py-6">
-            <div class="w-full inputHolder">
-              <label class="input-titel">Select Category</label>
-              <select class="w-full arrow option">
-                <option>Sweet Love Catering</option>
-                <option>Love Catering</option>
-                <option>Sweet Catering</option>
-              </select>
-            </div>
-            <div class="w-full inputHolder">
-              <label class="input-titel">Give Display Name of Your Category</label>
-              <input class="input" type="text"/>
-            </div>
-          </form>
-          <a href="#" class="btn-primary w-full uppercase">Submit</a>
         </div>
       </div>
     </div>

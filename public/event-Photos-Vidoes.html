@@ -17,7 +17,7 @@
 
     <div class="main flex min-h-screen">
       <!-- Left Panel -->
-      <div class="max-w-[230px] w-full bg-white shadow-md relative z-30">
+      <div class="leftPanel max-w-[230px] w-full bg-white shadow-md relative z-30">
         <div class="logo text-center px-4 pt-5 pb-8">
           <a href="#" class="block"><img src="assest/svg/logo.svg" alt="Evento Package Logo" class="max-w-full w-auto mx-auto" /></a>
         </div>
@@ -87,12 +87,79 @@
         
         <!-- Content In -->
         <div class="rightInContent">
-          <div class="wrapper">
+          <div class="wrapper h-full">
             
-            <div class="space-y-8">
+            <div class="space-y-8 h-full">
+              <!-- titel-holder  -->
               <div class="flex justify-between items-center">
                 <a href="#" class="flex items-center"><i class="icon-back-arrow mr-4 text-2xl"></i><h1>Sweet Love Catering</h1></a>
               </div>
+              <!-- step-progress-bar  -->
+              <div class="w-full overflow-hidden">
+                  <ul class="flex justify-between step-progress-holder">
+                    <li>
+                      <div>
+                        <span>01</span>
+                      </div>
+                      <h3>Add Place</h3>                        
+                    </li>                      
+                    <li>
+                      <div>
+                        <span>02</span>
+                      </div>
+                      <h3>about place</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>03</span>
+                      </div>
+                      <h3>personal details</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>04</span>
+                      </div>
+                      <h3>Photos & videos</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>05</span>
+                      </div>
+                      <h3>add service</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>06</span>
+                      </div>
+                      <h3>capacity</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>07</span>
+                      </div>
+                      <h3>company details</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>08</span>
+                      </div>
+                      <h3>Terms & Conditions</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>09</span>
+                      </div>
+                      <h3>Discount</h3>                        
+                    </li>
+                    <li>
+                      <div>
+                        <span>10</span>
+                      </div>
+                      <h3>Calendar</h3>                        
+                    </li>
+                  </ul>
+              </div>
+              <!-- main-content  -->
               <div class="space-y-5">
                 <div class="upload-holder">
                     <h3 class="flex items-end">Photo <span class="input-titel ml-2">5 Images (up to 5MB/Image)</span></h3>
@@ -104,18 +171,18 @@
                 <div class="media-upload-holder">
                     <span class="input-titel">Uploaded Photo</span>
                     <div class="flex space-x-2.5">
-                        <a href="#" class="upload-box">
+                        <div class="upload-box">
                             <div class="rounded relative overflow-hidden">
                               <img src="assest/images/upload-1.png" alt="upload-1"/>
                               <button>Remove</button>
                             </div>
-                        </a>
-                        <a href="#" class="upload-box">
+                        </div>
+                        <div class="upload-box">
                             <div class="rounded relative overflow-hidden">
                               <img src="assest/images/upload-1.png" alt="upload-1"/>
                               <button>Remove</button>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
                 <div class="upload-holder">
@@ -128,22 +195,22 @@
                 <div class="media-upload-holder">
                     <span class="input-titel">Uploaded videos</span>
                     <div class="flex space-x-2.5">
-                        <a href="#" class="upload-box">
+                        <div class="upload-box">
                             <div class="rounded relative overflow-hidden">
                               <img src="assest/images/upload-1.png" alt="upload-1"/>
                               <button>Remove</button>
                             </div>
-                        </a>
-                        <a href="#" class="upload-box">
+                        </div>
+                        <div class="upload-box">
                             <div class="rounded relative overflow-hidden">
                               <img src="assest/images/upload-1.png" alt="upload-1"/>
                               <button>Remove</button>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
                 <div class="flex justify-end" style="margin-top: 0;">
-                  <a href="#" class="title-btn">Buy Space</a>
+                  <a href="#" class="btn-primary small">Buy Space</a>
                 </div>
                 <span class="input-titel text-sm">Disclaimer - These images and videos will first be verified by the admin and then given the authority.</span>
               </div>
@@ -151,6 +218,11 @@
               <div class="w-full mt-5">
                   <img src="./assest/images/ring-ad.png" alt="ring-ad" class="w-full object-cover"/>
               </div>
+            </div>
+
+            <div class="w-full mt-auto flex items-center justify-between">
+              <button type="button" class="flex items-center"><i class="icon-back-arrow mr-3"></i><h3>Back</h3></button>
+              <button type="button" class="flex items-center"><h3>Next</h3><i class="icon-next-arrow ml-3"></i></button>
             </div>
 
           </div>

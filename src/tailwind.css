@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 /* font-family: 'Nunito Sans', sans-serif;
 font-family: 'Poppins', sans-serif; */
@@ -24,14 +23,16 @@ p.exsmall {@apply text-[13px] leading-5 font-medium text-japaneseIndigo;}
 
 
 /* Left Nav Bar */
+.leftPanel {@apply h-screen overflow-y-auto overflow-x-hidden;}
 .nav a {@apply flex items-center text-base font-bold space-x-4 border-l-[3px] border-transparent px-4 py-2.5 hover:border-current hover:text-spiroDiscoBall transition-all duration-300;}
 .nav a.active {@apply text-spiroDiscoBall border-spiroDiscoBall;}
 
 /* rightInContent */
-.rightInContent {@apply py-12;}
+.rightInContent {@apply py-12 overflow-y-auto h-[calc(100vh-76px)];}
 
 /* Button Default */
 .btn-primary {@apply bg-spiroDiscoBall text-white border-2 border-spiroDiscoBall hover:text-spiroDiscoBall hover:bg-transparent transition-all duration-300 inline-block text-center text-lg font-bold py-2.5 px-8 rounded;}
+.btn-primary.small {@apply px-6 py-2 text-base rounded-md;}
 
 
 ::-webkit-scrollbar {background-color: transparent;}
@@ -51,11 +52,16 @@ input:checked + i{@apply scale-100 duration-300;}
 
 .input-titel{@apply block text-sm text-quicksilver font-bold pb-1;}
 .title-btn{@apply px-6 py-2.5 bg-spiroDiscoBall rounded-md text-white text-base font-semibold flex items-center;}
-.arrow{@apply appearance-none w-full;background-image: url('../svg/arrow.svg');background-repeat: no-repeat;background-position: calc(100% - 17px) center;}
+.arrow{@apply appearance-none w-full;background-image: url('../svg/arrow.svg');background-repeat: no-repeat;background-position: calc(100% - 17px) center;cursor: pointer;}
 
 
 /* Select Price per Radio */
 .selectPrice label input[type="radio"]:checked + span {@apply bg-spiroDiscoBall text-white;}
+
+
+
+@tailwind utilities;
+
 
 
 /* Switch toggle */
@@ -74,10 +80,26 @@ input[type="checkbox"].switch:checked ~ .off{@apply text-japaneseIndigo;}
 
 /* upload input */
 .upload-holder{@apply w-full space-y-2.5;}
-.upload{@apply py-5 px-5 text-center bg-white block w-full rounded-md border-2 border-dashed border-quicksilver;}
+.upload{@apply py-5 px-5 text-center bg-white block w-full rounded-md border-2 border-dashed border-quicksilver cursor-pointer;}
 .upload-box{@apply p-1.5 bg-white rounded-md w-28 h-28;}
-.upload-box button{@apply h-5 w-full text-center bg-spiroDiscoBall text-xs font-bold text-white absolute bottom-0 inset-x-0;}
+.upload-box button{@apply h-5 w-full text-center bg-spiroDiscoBall text-xs font-bold text-white absolute bottom-0 inset-x-0 translate-y-8 transition-all duration-300 cursor-pointer;}
+.upload-box:hover button{@apply translate-y-0;}
 
 /* upload popup */
+.popup {@apply px-5;}
+.popup > div {@apply py-7 overflow-x-hidden overflow-y-auto;}
 .upload-popup{@apply p-2;}
 .btn-cancel {@apply bg-magicPotion border border-magicPotion hover:text-magicPotion;}
+
+/* stap-prosses-bar  */
+.step-progress-holder li{@apply relative space-y-2.5 px-2 w-full text-center;}
+.step-progress-holder li div span{@apply text-xs text-quicksilver font-semibold w-6 h-6 rounded-full bg-[#dddddd] shadow-xl flex items-center justify-center mx-auto transition-all duration-300;}
+.step-progress-holder li h3{@apply text-xs xl:text-sm whitespace-nowrap;}
+.step-progress-holder li div::after {@apply content-[''] w-full h-0.5 absolute top-3 inset-x-0 -z-10 bg-[#dddddd] transition-all duration-300;}
+.step-progress-holder li div::before{@apply content-[''] w-0 h-0.5 absolute top-3 inset-x-0 bg-spiroDiscoBall z-[-1] transition-all duration-300;}
+.step-progress-holder li.active div::before{@apply w-full;}
+.step-progress-holder li.active div span{@apply bg-spiroDiscoBall text-white;}
+
+/* date input */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {@apply opacity-0 absolute left-4 cursor-pointer;}
