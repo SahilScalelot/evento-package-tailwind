@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is Your Business</title>
+    <title>Dashboard Event Select option</title>
     <!-- Fonts -->
-    <link rel="stylesheet" href="assest/css/fonts.css" />
+    <link rel="stylesheet" href="../assest/css/fonts.css" />
     <!-- Moon Icons -->
-    <link rel="stylesheet" href="assest/css/moon-icon.css" />
+    <link rel="stylesheet" href="../assest/css/moon-icon.css" />
     <!-- Style -->
-    <link rel="stylesheet" href="assest/css/style.css" />
+    <link rel="stylesheet" href="../assest/css/style.css" />
   </head>
   <body>
-    <div class="main flex min-h-screen">
+    <div class="main flex min-h-screen">      
       <!-- Left Panel -->
       <div class="leftPanel max-w-[230px] w-full bg-white shadow-md relative z-30">
         <div class="logo text-center px-4 pt-5 pb-8">
-          <a href="#" class="block"><img src="assest/svg/logo.svg" alt="Evento Package Logo"
+          <a href="#" class="block"><img src="../assest/svg/logo.svg" alt="Evento Package Logo"
             class="max-w-full w-auto mx-auto" /></a>
         </div>
         <div class="nav">
@@ -89,43 +89,44 @@
                 class="icon-massage text-2xl block"></span></a>
               <a href="#" class="block hover:text-spiroDiscoBall anim" title="Megaphone"><span
                 class="icon-megaphone text-2xl block"></span></a>
-              <a href="#" class="block"><img src="assest/images/user-2.png" alt="user name"
+              <a href="#" class="block"><img src="../assest/images/user-2.png" alt="user name"
                 class="w-12 h-12 object-cover rounded-2xl" /></a>
             </div>
           </div>
         </div>
         <!-- Content In -->
         <div class="rightInContent">
-          <div class="wrapper">
-            <h1>What is Your Business?</h1>
-            <div class="flex flex-wrap justify-center pt-7 -mx-4">
-              <div class="w-full sm:w-1/2 xl:w-1/3 px-2 xl:px-4 pb-4 xl:pb-0 group">
-                <a href="#"
-                  class="text-center bg-white rounded flex flex-col justify-between items-center h-full px-7 py-12 border-2 border-transparent group-hover:border-2 group-hover:border-spiroDiscoBall">
-                  <div class="">
-                    <img src="assest/svg/have-you-places.svg" alt="" class="" />
-                  </div>
-                  <h2 class="pt-12 group-hover:text-spiroDiscoBall">Have you Places?</h2>
+          <div class="wrapper min-h-full flex flex-col">
+            <div class="space-y-8 h-full">
+              <div class="flex justify-between items-center">
+                <a href="#" class="flex items-center">
+                  <i class="icon-back-arrow mr-4 text-2xl"></i>
+                  <h1>Group Skils Business</h1>
                 </a>
+                <button class="bg-spiroDiscoBall px-5 py-3 text-white font-bold rounded-md tracking-wider"><i
+                  class="icon-plus text-white mr-4 text-base"></i>Add New</button>
               </div>
-              <div class="w-full sm:w-1/2 xl:w-1/3 px-2 xl:px-4 pb-4 xl:pb-0 group">
-                <a href="#"
-                  class="text-center bg-white rounded flex flex-col justify-between items-center h-full px-7 py-12 border-2 border-transparent group-hover:border-2 group-hover:border-spiroDiscoBall">
-                  <div class="">
-                    <img src="assest/svg/personal-skills-business.svg" alt="" class="" />
-                  </div>
-                  <h2 class="pt-12 group-hover:text-spiroDiscoBall">Personal Skills Business</h2>
-                </a>
+              <div class="space-y-5 pt-10">
+                <div class="">
+                  <span class="text-sm font-bold text-[#A6A6A6] pb-2">Skill</span>
+                  <select name="All Category"
+                      class="arrow bg-white pl-5 pr-11 py-3 text-japaneseIndigo font-bold rounded-md tracking-wider appearance-none focus-visible:outline-none">
+                      <option value="">Sounds and Lights</option>
+                      <option value="">Sounds and Lights</option>
+                      <option value="">Sounds and Lights</option>
+                      <option value="">Sounds and Lights</option>
+                    </select>
+                </div>
               </div>
-              <div class="w-full sm:w-1/2 xl:w-1/3 px-2 xl:px-4 pb-4 xl:pb-0 group">
-                <a href="#"
-                  class="text-center bg-white rounded flex flex-col justify-between items-center h-full px-7 py-12 border-2 border-transparent group-hover:border-2 group-hover:border-spiroDiscoBall">
-                  <div class="">
-                    <img src="assest/svg/group-skils-business.svg" alt="" class="" />
-                  </div>
-                  <h2 class="pt-12 group-hover:text-spiroDiscoBall">Group Skils Business</h2>
-                </a>
+              <!-- advisement -->
+              <div class="w-full mt-5">
+                <img src="./../assest/images/ring-ad.png" alt="ring-ad" class="w-full object-cover"/>
               </div>
+            </div>
+            <!-- next preview button  -->
+            <div class="prw-next-btn">
+              <button type="button" class="flex items-center"><i class="icon-back-arrow mr-3"></i><h3>Back</h3></button>
+              <button type="button" class="flex items-center active"><h3>Next</h3><i class="icon-next-arrow ml-3"></i></button>
             </div>
           </div>
         </div>
@@ -133,8 +134,8 @@
     </div>
     <!-- JS -->
     <!-- Jquery Min Library -->
-    <script src="assest/js/jquery.min.js"></script>
+    <script src="../assest/js/jquery.min.js"></script>
     <!-- Custom JS -->
-    <script src="assest/js/script.js"></script>
+    <script src="../assest/js/script.js"></script>
   </body>
 </html>

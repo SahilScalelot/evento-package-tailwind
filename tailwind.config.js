@@ -28,6 +28,9 @@ module.exports = {
         caribbeanGreen: '#13E1B0',
         ufoGreen: '#36C66F',
       },
+      boxShadow: {
+        'shadow': '0px 0px 10px rgba(0, 0, 0, 0.09)',
+      },
     },
   },
   plugins: [],

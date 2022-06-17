@@ -10,9 +10,9 @@ body{@apply font-primary text-japaneseIndigo bg-brightGray;}
 .anim {@apply transition-all duration-300;}
 
 /* Titles */
-h1,.h1 {@apply font-bold text-3xl;}
-h2 {@apply font-bold text-2xl;}
-h3 {@apply font-bold text-xl;}
+h1,.h1 {@apply font-bold text-2xl xl:text-3xl;}
+h2,.h2 {@apply font-bold text-2xl;}
+h3,.h3 {@apply font-bold text-xl;}
 
 /* Paragraphs */
 p {@apply font-semibold md:font-bold text-xs md:text-base lg:text-lg;}
@@ -45,7 +45,7 @@ p.exsmall {@apply text-[13px] leading-5 font-medium text-japaneseIndigo;}
 
 /* checkbox right */
 .checkbox {@apply relative flex justify-center items-center;}
-.checkbox input{@apply appearance-none w-8 h-8 border border-gray-300 rounded-md;}
+.checkbox input{@apply appearance-none w-8 h-8 border bg-white border-gray-300 rounded-md cursor-pointer;}
 .checkbox i{@apply absolute scale-0 origin-center;}
 input:checked {@apply bg-spiroDiscoBall border-spiroDiscoBall duration-200;}
 input:checked + i{@apply scale-100 duration-300;}
@@ -58,16 +58,19 @@ input:checked + i{@apply scale-100 duration-300;}
 /* Select Price per Radio */
 .selectPrice label input[type="radio"]:checked + span {@apply bg-spiroDiscoBall text-white;}
 
-
-
-@tailwind utilities;
-
+/* calendar */
+.calender_number{@apply border-[0.5px] border-gray-200 text-gray-600 w-[14.28%] h-[86px] text-base font-medium p-3 cursor-pointer;}
+.calender_select_number{@apply block bg-[#DDF6FC];}
+.calender_select_number ul li{@apply flex justify-between items-center text-[7px] xl:text-10 font-bold pb-0.5;}
 
 
 /* Switch toggle */
-input[type="checkbox"].switch{@apply appearance-none w-[50px] h-[10px] bg-brightGray rounded-md relative outline-none cursor-pointer before:content-[''] before:absolute before:transition-all before:w-6 before:h-6 before:border-4 before:border-caribbeanGreen before:bg-brightGray before:rounded-full before:top-1/2 before:left-0 before:-translate-y-1/2 checked:before:left-[calc(100%-20px)] checked:bg-caribbeanGreen checked:before:bg-caribbeanGreen;}
+input[type="checkbox"].switch{@apply appearance-none w-[50px] h-[10px] bg-[#BFE9DF] rounded-md relative outline-none cursor-pointer before:content-[''] before:absolute before:transition-all before:w-6 before:h-6 before:border-4 before:border-caribbeanGreen before:bg-brightGray before:rounded-full before:top-1/2 before:left-0 before:-translate-y-1/2 checked:before:left-[calc(100%-20px)] checked:bg-caribbeanGreen checked:before:bg-caribbeanGreen;}
 input[type="checkbox"].switch:checked ~ .on{@apply text-caribbeanGreen;}
 input[type="checkbox"].switch:checked ~ .off{@apply text-japaneseIndigo;}
+
+ /* customs box shadow
+.custom-shadow{@apply box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 9%);} */
 
 /* input-css required input  */
 .input-label-holder{@apply flex items-center justify-between;}
@@ -101,5 +104,35 @@ input[type="checkbox"].switch:checked ~ .off{@apply text-japaneseIndigo;}
 .step-progress-holder li.active div span{@apply bg-spiroDiscoBall text-white;}
 
 /* date input */
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {@apply opacity-0 absolute left-4 cursor-pointer;}
+input[type="date"]::-webkit-inner-spin-button,input[type="time"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator,input[type="time"]::-webkit-calendar-picker-indicator {@apply opacity-0 absolute left-4 cursor-pointer;}
+
+/* prw-next-btn */
+.prw-next-btn{@apply w-full mt-auto flex items-center justify-between pt-10;}
+.prw-next-btn button i, .prw-next-btn button h3{@apply text-quicksilver;}
+.prw-next-btn button.active i, .prw-next-btn button.active h3{@apply text-spiroDiscoBall;}
+.prw-next-btn button:hover{@apply opacity-70;}
+
+
+/* tab-holder */
+.teb-holder{@apply flex items-center border-b border-gray-300;}
+.teb-holder button{@apply py-5 text-quicksilver font-semibold border-b border-transparent px-8;}
+.teb-holder button.active{@apply text-spiroDiscoBall border-spiroDiscoBall;}
+
+.rs-black:before{@apply text-black;}
+
+/* Calender csss */
+.dates button{@apply w-[14.28%] text-center py-1 xl:py-2;}
+.dates button.active{@apply text-spiroDiscoBall;}
+
+
+.upload-box.ov-p{@apply p-0;}
+
+/* tabes- */
+.tab-main{@apply hidden;}
+.tab-main.active{@apply block;}
+
+
+
+
+@tailwind utilities;

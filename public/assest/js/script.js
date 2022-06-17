@@ -14,11 +14,11 @@ function removeActive(Id, db) {
 
 // 
 $(document).ready(function () {
-  $('.u-tabs li').click(function () {
+  $('.teb-holder button').click(function () {
     var tab_id = $(this).attr('data-tab');
-    $('.u-tabs li').removeClass('current');
-    $('.tabs-call').removeClass('current');
-    $(this).addClass('current');
-    $("#" + tab_id).addClass('current');
+    $('.teb-holder button').removeClass('active');
+    $('.tab-main').removeClass('active');
+    $(this).addClass('active');
+    $("#" + tab_id).addClass('active');
   });
 });
