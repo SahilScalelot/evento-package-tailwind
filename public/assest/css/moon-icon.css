@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-download:before {
+  content: "\e949";
+  color: #20c0e8;
+}
 .icon-list-alpha:before {
   content: "\e92b";
 }
